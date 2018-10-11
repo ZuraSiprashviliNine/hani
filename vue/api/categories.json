@@ -1,0 +1,36 @@
+{
+    "content": [
+        {
+            "title": "category 1",
+            "slag": "category_1",
+            "sub": [
+                {
+                    "title": "category 1-1",
+                    "slag": "category_1_1"
+                },
+                {
+                    "title": "category 1-2",
+                    "slag": "category_1_2"
+                }
+            ]
+        },
+        {
+            "title": "category 2",
+            "slag": "category_2",
+            "sub": [
+                {
+                    "title": "category 2-1",
+                    "slag": "category_2_1"
+                },
+                {
+                    "title": "category 2-2",
+                    "slag": "category_2_2"
+                },
+                {
+                    "title": "category 2-3",
+                    "slag": "category_2_3"
+                }
+            ]
+        }
+    ]
+}

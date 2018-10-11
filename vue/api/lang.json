@@ -1,0 +1,27 @@
+{
+    "content": {
+        "languages": [
+            "en",
+            "ka",
+            "ru"
+        ],
+        "ref": "en",
+        "keywords": {
+            "en": {
+                "Home": "home",
+                "contact": "contact",
+                "about page": "about page"
+            },
+            "ka": {
+                "Home": "მთავარი გვერდი",
+                "contact": "კონტაქტი",
+                "about page": "ჩვენ შესახებ"
+            },
+            "ru": {
+                "Home": "1",
+                "contact": "2",
+                "about page": "3"
+            }
+        }
+    }
+}
