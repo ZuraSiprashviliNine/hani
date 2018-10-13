@@ -1,4 +1,5 @@
 
 export default {
-    routes: []
+    routes: [],
+    dropped: null
 }

@@ -6,5 +6,8 @@ export default {
         getRoutes(routes => {
             commit('setRoutes', routes);
         })
+    },
+    drop({commit}, path){
+        commit('drop', path);
     }
 }

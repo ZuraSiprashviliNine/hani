@@ -3,14 +3,9 @@
         id="application" 
         class="application"
         ref="application"
-        @scroll="Scroll"
-        :class="{scrolled: scrolled}">
-        <hani-header />
-        <transition
-            enter-active-class="animated bounceInLeft"
-            leave-active-class="animated bounceOutDown">
-            <hani-sidebar v-if="Sidebar"/>
-        </transition>
+        :class="{scrolled: scrolled}"
+        @scroll="scroll">
+        <hani-toolbar />
         <transition
             enter-active-class="animated fadeIn"
             leave-active-class="animated fadeOut"
@@ -21,41 +16,42 @@
 </template>
 
 <script>
+
 import {
     mapGetters,
     mapActions
 } from 'vuex';
 
-import haniHeader from './components/shared/header';
-import haniSidebar from './components/shared/sidebar';
+import {getScrollbarWidth} from './helpers/functions';
+
+import haniToolbar from './components/shared/toolbar';
 
 export default {
     components: {
-        haniHeader,
-        haniSidebar
+        haniToolbar
     },
     computed: {
-        ...mapGetters({
-            Sidebar: 'Common/Sidebar'
-        })
     },
     data(){
         return {
             scrolled: false
         }
     },
+    mounted(){
+        this.$refs.application.style.width = `calc(100vw + ${getScrollbarWidth()}px)`
+    },
     methods: {
         ...mapActions({
             _getRoutes: 'Navigation/getRoutes',
             _initLangs: 'Lang/langs'
         }),
-        Scroll(event){
+        scroll(event){
             if(event.target.scrollTop > 0){
-                if(this.scrolled === false){
+                if(!this.scrolled){
                     this.scrolled = true;
                 }
             }else{
-                if(this.scrolled === true){
+                if(this.scrolled){
                     this.scrolled = false;
                 }
             }

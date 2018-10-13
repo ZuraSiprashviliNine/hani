@@ -1,6 +1,6 @@
 <template>
     <div id="home" class="page">
-        hoem
+        hoemx
         
         <br>
         <br>

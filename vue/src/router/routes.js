@@ -8,18 +8,6 @@ export const RouterRoutes = [
     {
         path: '/contact',
         component: () => import('../components/pages/contact')
-    },
-    {
-        path: '/register',
-        component: () => import('../components/pages/registration')
-    },
-    {
-        path: '/login',
-        component: () => import('../components/pages/login')
-    },
-    {
-        path: '/test/:n',
-        component: () => import('../components/pages/test')
     }
 ];
 
